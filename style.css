@@ -1,0 +1,292 @@
+/* Declaration of CSS color variables */
+:root {
+    /* ========Color Variables========== */
+
+    --table-background-color: #33f0f3e1;
+    --main-text-color: #425B5C;
+    --sub-heading-text-color: #2D3333;
+    --main-heading-color: #2D3333;
+    --table-border-color: #425B5C;
+    --text-border-color: #4A8E8F;
+    --links-color: #2D3333;
+    --image-border-color: #1EF2F5;
+
+    /* =========Fonts Variables=========== */
+
+    --heading-font: 'Open Sans', sans-serif;
+    --subheading-font:  'Sunday Romantic', sans-serif;
+    --main-text-font: 'Playfair Display', sans-serif;
+    }
+
+
+    /* ==========Dafont Font family-============== */
+
+    @font-face {
+        font-family: 'YourFontName';
+        src: url('fonts/SundayRomantic-Regular\ DEMO.otf') format('opentype'); 
+      }
+
+
+/* =================Homepage CSS=============== */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("images/background.jpeg");
+}
+
+table {
+    width: 80vw;
+    height: 90vh; /* Set the table height to 100% of the viewport height */
+    margin: ;
+    background: var( --table-background-color);
+    backdrop-filter: blur(10px);
+    border-top: none;
+}
+
+table tr{
+    width: 100%;
+}
+
+tr th {
+    height: 100px;
+}
+
+tr th h3{
+    font-size: calc(20px + 2vw);
+    color: var(--main-heading-color);
+    font-family: var(--heading-font);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid var(--table-border-color);
+    border-radius: 5px;
+}
+
+td img{
+    width: calc(100px + 30vw);
+    border: 3px solid var(--image-border-color);
+    border-radius: 25px; 
+}
+
+tr td a{
+    color: var(--links-color);
+    font-size: calc(10px + 1vw);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+    font-family: var(--subheading-font);
+}
+
+.links-nav td:hover a{
+    color: white;
+}
+
+.links-nav{
+    height: 30px;
+}
+
+.home-paragraph{
+    padding: 10px;
+    border: 1px solid var(--links-color);
+    font-family: var(--main-text-font);
+    font-size: 14px;
+    background: var(--main-text-color);
+    color: aliceblue;
+    margin: 0 10vw;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+/* ===============History CSS================== */
+
+
+.history-container img{
+    height: calc(60px + 20vw);
+
+}
+
+.history-container div span{
+    font-weight: 700;
+    text-align: left;
+    font-family: var(--subheading-font);
+    font-size: 20px;
+}
+
+.history-container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.history-container div p{
+    width: 80%;
+    text-align: left;
+    font-family: var(--main-text-font);
+    
+}
+
+/* ============Kobe CSS============ */
+
+.legend-container img{
+    width: calc(70px + 17vw);
+    float: right;
+    margin: 30px;
+    margin-top: -20px;
+}
+
+.legend-container p{
+    font-size: calc(8px + 1vw);
+    text-align: left;
+    font-family: var(--main-text-font);
+}
+
+.kobe-container{
+    font-size: 20px;
+}
+
+.active{
+    color: white;
+}
+
+.links-column{
+    height: 100%;
+}
+
+/* ==============Links==================== */
+.links-container{
+    display: flex;
+}
+.links-container h4{
+    margin-left: 15px;
+    font-size: 20px;
+}
+.links-container .content ul li{
+    text-align: start;
+    padding: 20px;
+}
+
+.links-container .content ul li a{
+    font-weight: 500;
+    font-size: calc(10px + .5vw);
+    text-align: start;
+    color: var(--subheading-font);
+}
+
+@media(max-width:700px){
+    .links-container{
+        flex-direction: column;
+    }
+}
+
+/* =============Questionnairre CSS================= */
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin-left: 10vw; */
+    margin-top: 10px;
+}
+
+form .form-points{
+    display: flex;
+    flex-direction: column;
+}
+
+form div{
+    display: flex;
+    justify-content: left;
+
+}
+
+
+
+
+label{
+    text-align: start;
+}
+
+.fav{
+    display: flex;
+    flex-direction: column;
+}
+
+label, input{
+    padding: 10px;
+    font-family: var(--main-text-font);
+}
+
+input{
+    margin-left: 20px;
+}
+
+.form-buttons{
+    margin-top: 20px;
+}
+
+select{
+    margin-left: 25px;
+    padding: 5px;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+
+.table-row .formm{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media(max-width: 700px){
+    .table-row .formm{
+        flex-direction: column;
+    }
+
+
+    .table-image{
+        order: -1;
+    }
+}
+
+.table-row .formm div img{
+    margin-top: 50px;
+}
+
+textarea{
+    margin-left: 20px;
+}
+
+.form-buttons input{
+    padding: 5px 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-heading-color);
+    background-color: var(--main-heading-color);
+    color: white;
+    transition: 0.3s ease;
+}
+
+.form-buttons input:hover{
+    background: none;
+    color: var(--main-heading-color);
+}
+
+/* =================Footer CSS================= */
+
+.footer{
+    background: var(--links-color);
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--image-border-color);
+    margin-top: 50px;
+}
